@@ -22,6 +22,13 @@ public class ClassRoster
     }
     
     /**
+     * Adds the given student to this roster
+     */
+    public void addStudent(Student s)
+    {
+    }
+    
+    /**
      * Returns the percentage (0-100) of the class having the given letter grade (e.g. "A", "B").
      */
     public int getPercentWithGrade(String letterGrade)
