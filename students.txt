@@ -1,5 +1,4 @@
 Student name	HW	exam 1	exam 2
-Chase Coughlin	72	56	87
 Barry Fast	87	65	54
 Riesey van Huyten	88	84	81
 Jimmy Poole	101	100	110
