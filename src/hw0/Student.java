@@ -8,7 +8,7 @@ package hw0;
 /**
 * This class represents a student with a name, a homework grade, and 2 exam grades.
  */
-public class Student 
+public class Student implements Comparable<Student>
 { 
     // these are the student scores (0-100) on exam 1, exam 2, homework
     private int exam1grade, exam2grade, hwgrade;
@@ -106,5 +106,14 @@ public class Student
     }
     
     
+    public int hashCode()
+    {
+        return getName().hashCode();
+    }
+    
+    public int compareTo(Student rhs)
+    {
+        return rhs.getAverage() - getAverage();
+    }
     
 }
