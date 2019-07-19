@@ -13,12 +13,13 @@ public class Student
     // these are the student scores (0-100) on exam 1, exam 2, homework
     private int exam1grade, exam2grade, hwgrade;
     
-    
+    /**
+     * Constructs a student with the given name.
+     * Fill this in.
+     */
     public Student(String name)
     {
-        exam1grade = 0;
-        exam2grade = 0;
-        hwgrade = 0;
+
     }
     
     
