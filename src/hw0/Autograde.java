@@ -45,14 +45,23 @@ public class Autograde {
         s5.setExam1Grade(67);
         s5.setExam2Grade(38);
         s5.setMakeupScore(85);
+        
+        StudentWithMakeupExam s6 = new StudentWithMakeupExam("Forrest Calhoun");
+        s6.setHWGrade(73);
+        s6.setExam1Grade(81);
+        s6.setExam2Grade(57);
+        s6.setMakeupScore(42);
 
-        possible = 5;
+
+        possible = 7;
         
         points += s2.getAverage() == 85? 1 : 0;
         points += s2.getLetterGrade().equals("B")? 1 : 0;
         points += s5.getMakeupScore() == 85? 1 : 0;
         points += s5.getAverage() == 72? 1 : 0;
         points += s5.getLetterGrade().equals("C")? 1 : 0;
+        points += s6.getAverage() == 70? 1 : 0;
+        points += s6.getLetterGrade().equals("C")? 1 : 0;
         
         System.err.println("\tTesting StudentWithMakeupExam.class: \t"+String.format("%.2f", (double)points/possible*100)+"%");
     }
