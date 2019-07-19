@@ -106,11 +106,17 @@ public class Student implements Comparable<Student>
     }
     
     
+    /**
+     * Returns a hashcode representing this student.
+     */
     public int hashCode()
     {
         return getName().hashCode();
     }
     
+    /**
+     * Returns an integer value indicating whether this student or the rhs student should appear first in sorted order.
+     */
     public int compareTo(Student rhs)
     {
         return rhs.getAverage() - getAverage();
