@@ -87,7 +87,7 @@ public class Autograde {
         
         
         int points = 0;
-        int possible = 8;
+        int possible = 10;
         
         
         Student s1 = new Student("Barry Fast");
@@ -111,6 +111,10 @@ public class Autograde {
         s4.setHWGrade(20);
         s4.setExam1Grade(-30);
         s4.setExam2Grade(-40);
+        
+        points += s1.getName().equals("Barry Fast")? 1 : 0;
+        points += s2.getName().equals("Riesey van Huyten")? 1 : 0;
+        
         
         
         points += s2.getAverage() == 85? 1 : 0;
