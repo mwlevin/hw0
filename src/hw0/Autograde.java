@@ -53,13 +53,15 @@ public class Autograde {
         s6.setMakeupScore(42);
 
 
-        possible = 7;
+        possible = 9;
         
         points += s2.getAverage() == 85? 1 : 0;
         points += s2.getLetterGrade().equals("B")? 1 : 0;
         points += s5.getMakeupScore() == 85? 1 : 0;
+        points += s5.getExam2Grade() == 85? 1 : 0;
         points += s5.getAverage() == 72? 1 : 0;
         points += s5.getLetterGrade().equals("C")? 1 : 0;
+        points += s6.getExam2Grade() == 57? 1 : 0;
         points += s6.getAverage() == 70? 1 : 0;
         points += s6.getLetterGrade().equals("C")? 1 : 0;
         

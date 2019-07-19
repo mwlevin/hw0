@@ -16,14 +16,28 @@ public class StudentWithMakeupExam extends Student
         super(name);
     }
     
+    /**
+     * Returns the makeup exam score given to this student.
+     */
     public int getMakeupScore()
     {
         return 0;
     }
     
+    /**
+     * Updates the makeup exam score for this student.
+     */
     public void setMakeupScore(int score)
     {
         
+    }
+    
+    /**
+     * Returns the exam 2 grade for the student, which is the higher of the original grade and the makeup score.
+     */
+    public int getExam2Grade()
+    {
+        return super.getExam2Grade();
     }
     
 }
