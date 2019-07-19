@@ -14,8 +14,8 @@ public class Student
     private int exam1grade, exam2grade, hwgrade;
     
     /**
-     * Constructs a student with the given name.
-     * Fill this in.
+     * Constructs a student with the given name.  
+    * Fill this in.
      */
     public Student(String name)
     {

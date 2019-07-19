@@ -23,12 +23,14 @@ public class Main {
         System.out.println("Name: "+s1.getName());
         System.out.println("Average: "+s1.getAverage());
         System.out.println("Grade: "+s1.getLetterGrade());
+        System.out.println();
         
         ClassRoster roster = new ClassRoster();
         roster.readFile(new File("students.txt"));
         System.out.println("Size: "+roster.getClassSize());
         System.out.println("Best student: "+roster.getBestStudent());
         System.out.println("% with A: "+roster.getPercentWithGrade("A"));
+        System.out.println();
         
         StudentWithMakeupExam s5 = new StudentWithMakeupExam("Ned Dubois");
         s5.setHWGrade(66);
@@ -40,6 +42,7 @@ public class Main {
         System.out.println("Makeup score: "+s5.getMakeupScore());
         System.out.println("Average: "+s5.getAverage());
         System.out.println("Grade: "+s5.getLetterGrade());
+        System.out.println();
         
         Autograde.testCode();
     }
