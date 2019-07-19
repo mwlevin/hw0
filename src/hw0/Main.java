@@ -40,6 +40,7 @@ public class Main {
         
         System.out.println("Name: "+s5.getName());
         System.out.println("Makeup score: "+s5.getMakeupScore());
+        System.out.println("Exam 2 score: "+s5.getExam2Grade());
         System.out.println("Average: "+s5.getAverage());
         System.out.println("Grade: "+s5.getLetterGrade());
         System.out.println();
