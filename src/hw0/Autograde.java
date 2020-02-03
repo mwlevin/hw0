@@ -58,8 +58,6 @@ public class Autograde {
         roster.addStudent(s5);
         roster.addStudent(s6);
         
-        System.out.println(roster.getPercentWithGrade("C"));
-        
         possible = 14;
         
         points += s2.getAverage() == 85? 1 : 0;
