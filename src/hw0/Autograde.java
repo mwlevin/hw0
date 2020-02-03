@@ -27,7 +27,7 @@ public class Autograde {
     }
     
     
-    public static void makeupExamTest()
+    public static void makeupExamTest() throws IOException
     {
 
         int points = 0;
@@ -52,8 +52,15 @@ public class Autograde {
         s6.setExam2Grade(57);
         s6.setMakeupScore(42);
 
-
-        possible = 9;
+        ClassRoster roster = new ClassRoster();
+        roster.readFile(new File("students.txt"));
+        
+        roster.addStudent(s5);
+        roster.addStudent(s6);
+        
+        System.out.println(roster.getPercentWithGrade("C"));
+        
+        possible = 14;
         
         points += s2.getAverage() == 85? 1 : 0;
         points += s2.getLetterGrade().equals("B")? 1 : 0;
@@ -64,6 +71,12 @@ public class Autograde {
         points += s6.getExam2Grade() == 57? 1 : 0;
         points += s6.getAverage() == 70? 1 : 0;
         points += s6.getLetterGrade().equals("C")? 1 : 0;
+        points += roster.getPercentWithGrade("A") == 17? 1 : 0;
+        points += roster.getPercentWithGrade("B") == 17? 1 : 0;
+        points += roster.getPercentWithGrade("C") == 50? 1 : 0;
+        points += roster.getPercentWithGrade("D") == 0? 1 : 0;
+        points += roster.getPercentWithGrade("F") == 17? 1 : 0;
+
         
         System.err.println("\tTesting StudentWithMakeupExam.class: \t"+String.format("%.2f", (double)points/possible*100)+"%");
     }
@@ -75,10 +88,25 @@ public class Autograde {
         int points = 0;
         int possible = 0;
         
+        possible = 14;
+        
         ClassRoster roster = new ClassRoster();
         roster.readFile(new File("students.txt"));
         
-        possible = 7;
+        points += roster.getClassSize() == 4? 1 : 0;
+        points += roster.getBestStudent().equals("Jimmy Poole")? 1 : 0;
+        points += roster.getPercentWithGrade("A") == 25? 1 : 0;
+        points += roster.getPercentWithGrade("B") == 25? 1 : 0;
+        points += roster.getPercentWithGrade("C") == 25? 1 : 0;
+        points += roster.getPercentWithGrade("D") == 0? 1 : 0;
+        points += roster.getPercentWithGrade("F") == 25? 1 : 0;
+
+        Student s8 = new Student("Chase Coughlin");
+        s8.setHWGrade(72);
+        s8.setExam1Grade(56);
+        s8.setExam2Grade(87);
+        
+        roster.addStudent(s8);
         
         points += roster.getClassSize() == 5? 1 : 0;
         points += roster.getBestStudent().equals("Jimmy Poole")? 1 : 0;
@@ -87,6 +115,7 @@ public class Autograde {
         points += roster.getPercentWithGrade("C") == 40? 1 : 0;
         points += roster.getPercentWithGrade("D") == 0? 1 : 0;
         points += roster.getPercentWithGrade("F") == 20? 1 : 0;
+        
         
         System.err.println("\tTesting ClassRoster.class: \t"+String.format("%.2f", (double)points/possible*100)+"%");
         
